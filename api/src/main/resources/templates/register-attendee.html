@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script
+          src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script
+          src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h2>Register</h2>
+    <form th:action="@{/attendee/register}" th:object="${attendee}" method="post">
+
+      <div class="form-group">
+        <label for="dni">DNI</label>
+        <input type="text" class="form-control" id="dni" placeholder="Enter DNI" name="dni" required th:field="*{dni}"> <br />
+        <p th:if="${#fields.hasErrors('dni')}" th:errors="*{dni}" class="alert alert-danger"></p>
+      </div>
+
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email" required th:field="*{email}"> <br />
+        <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="alert alert-danger"></p>
+      </div>
+
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Name" name="name" required th:field="*{name}"> <br />
+        <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="alert alert-danger"></p>
+      </div>
+
+      <div class="form-group">
+        <label for="surname">Surname</label>
+        <input type="text" class="form-control" id="surname" placeholder="Enter Surname" name="surname" required th:field="*{surname}" > <br />
+        <p th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}" class="alert alert-danger"></p>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="text" class="form-control" id="phone" placeholder="Phone" name="phone" required th:field="*{phone}"> <br />
+        <p th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}" class="alert alert-danger"></p>
+      </div>
+
+      <div class="form-group">
+        <label for="birthDate">Birth Date:</label>
+        <input type="date" class="form-control" id="birthDate" placeholder="Enter Birth Date" name="birthDate" required th:field="*{birthDate}" > <br />
+        <p th:if="${#fields.hasErrors('birthDate')}" th:errors="*{birthDate}" class="alert alert-danger"></p>
+      </div>
+
+      <div class="form-group">
+        <label for="dniScanUrl">DNI Scan URL</label>
+        <input type="text" class="form-control" id="dniScanUrl" placeholder=" Enter DNI ScanUrl" name="dniScanUrl" required th:field="*{dniScanUrl}" > <br />
+        <p th:if="${#fields.hasErrors('dniScanUrl')}" th:errors="*{dniScanUrl}" class="alert alert-danger"></p>
+      </div>
+
+      <input type="submit"  class="btn btn-success" value="Register">
+    </form>
+</div>
+
+</body>
+</html>

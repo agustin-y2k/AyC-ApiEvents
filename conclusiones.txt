@@ -1,0 +1,27 @@
+-------------------------------------------------------------------------
+				Unit Test
+-------------------------------------------------------------------------
+
+Fortalezas:
+	- Rápidas de realizar
+	- Intuitivas
+	- Sacan a la luz posibles fallos en la lógica como por ejemplo en 
+	el caso de las validaciones
+
+Desventajas:
+	- No automatizan el proceso en que suceden los eventos
+	- No interactúa con el cliente ya que se realiza sobre el
+	funcionamiento del backend
+	
+-------------------------------------------------------------------------
+				UI Test
+-------------------------------------------------------------------------
+
+Fortalezas:
+	- Se puede evaluar como responden los usuarios a las diferentes alternativas
+	- Problemas potenciales son ubicados antes de que el producto sea lanzado
+	- Se puede evaluar la automatización de los recursos cargados
+
+Desvantajas:
+	- Las pruebas no son 100% representativas del escenario de la vida real
+	- Pueden haber errores en la lógica que no aparecen en este tipo de test
